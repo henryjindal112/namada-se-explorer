@@ -49,7 +49,7 @@ function Search () {
                             </div>
                             <div>
                                 <div className=''>Block Height</div>
-                                <button onClick={() => {navigate('/search/' + txnData['block_height'])}} className='underline'>#{txnData["block_height"]}</button>
+                                <button onClick={() => {navigate('/search/' + txnData['block_height'])}} className='hover:text-[#00FFFF] underline'>#{txnData["block_height"]}</button>
                             </div>
                         </div>
                         <div className='flex justify-between py-6'>
@@ -142,7 +142,7 @@ function Search () {
                                 blockData["txn_hash"] !== undefined ? blockData["txn_hash"].map(element => {
                                     return (
                                         <div className='flex items-center justify-between w-full border-t border-[#FFFF00] py-4 space-x-4 text-[#FFFF00]'>
-                                            <button onClick={() => {navigate('/search/' + element['hash_id'])}} className='underline text-[14px] w-80 truncate'>{element["hash_id"]}</button>
+                                            <button onClick={() => {navigate('/search/' + element['hash_id'])}} className='hover:text-[#00FFFF] underline text-[14px] w-80 truncate'>{element["hash_id"]}</button>
                                             <div className='text-[14px]'>#{blockData["block_height"]}</div>
                                             <div>{element["tx_type"]}</div>
                                          </div>
